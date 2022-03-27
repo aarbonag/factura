@@ -8,23 +8,17 @@
  * @author aarbonag
  */
 public class factura {
-        String numero;
+        int numero;
         String descripcion;
         int cantidad;
         double precio;
 
-    public factura(String numero, String descripcion, int cantidad, double precio) {
-        this.numero = numero;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-        this.precio = precio;
-    }
     
-   public String getNumero(){
+   public int getNumero(){
        return numero;
    } 
    
-   public void setNumero(String nuevoNumero){
+   public void setNumero(int nuevoNumero){
        this.numero = nuevoNumero;
    }
    
@@ -47,8 +41,14 @@ public class factura {
        return precio;
    } 
    
-   public void setPrecio(double nuevaPrecio){
-       this.precio = nuevaPrecio;
+   public void setPrecio(double nuevoPrecio){
+       this.precio = nuevoPrecio;
+   }
+   
+   public double getTotalFactura(int cantidad, double precio){
+       double total=0;
+       total=cantidad*precio;
+       return total;
    }
         
     }
